@@ -1,8 +1,8 @@
 Getting Started with Redux
 =============
 
-[Redux](http://redux.js.org/) 的作者 [Dan Abramov](https://twitter.com/dan_abramov?lang=zh-tw) 在 [Egghead](https://egghead.io/series/getting-started-with-redux) 發表 redux 的課程。
+[Redux](http://redux.js.org/) author [Dan Abramov](https://twitter.com/dan_abramov) [Egghead](https://egghead.io/series/getting-started-with-redux) post redux course.
 
-此 repo 當作課程筆記，為自己學習 redux 的做個紀錄，歡迎一起研究。
+This repo is course notes, for redux study purpose. Everyone is welcome to use for study.
 
-各程式碼皆取自影片裡的內容，外加上自己的想法，如有錯誤歡迎 PR
+Each code is taken from the contents of the video, plus additional comments. If you see any error, PR is welcome.
