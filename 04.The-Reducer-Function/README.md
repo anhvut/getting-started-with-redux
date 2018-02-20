@@ -4,6 +4,46 @@ The Reducer Function
 [Section 4](https://egghead.io/lessons/javascript-redux-the-reducer-function?series=getting-started-with-redux)
 
 
-講述 Redux 的每個 state 都是 immutable object ，為了達到此目地，每一個 state 必須進入一個 pure function 處理完後，回傳下一個 state。
+The Redux state is an immutable object.
 
-此 pure function 即為 reduce function
+In order to achieve this goal, each state is passed as a parameter of a pure function, which returns the next state.
+
+This pure function is the reduce function.
+```js
+const counter = (state = 0, action) => {
+    switch (action.type ) {
+        case 'INCREMENT':
+            return state + 1;
+        case 'DECREMENT':
+            return state - 1;
+        default:
+            return state;
+    }
+}
+
+expect(
+    counter(0, { type: 'INCREMENT' })
+).toEqual(1);
+
+expect(
+    counter(1, { type: 'INCREMENT' })
+).toEqual(2);
+
+expect(
+    counter(2, { type: 'DECREMENT' })
+).toEqual(1);
+
+expect(
+    counter(1, { type: 'DECREMENT' })
+).toEqual(0);
+
+expect(
+    counter(1, { type: 'SOMETHING_ELSE' })
+).toEqual(1);
+
+expect(
+    counter(undefined, {})
+).toEqual(0);
+
+console.log('Tests passed!');
+```
